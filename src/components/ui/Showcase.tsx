@@ -15,7 +15,7 @@ export default function Showcase() {
           Our Clients & Success Stories
         </h2>
         <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-          We’ve helped amazing businesses grow and reach new heights. Here are
+          We ve helped amazing businesses grow and reach new heights. Here are
           some of our valued partners.
         </p>
       </div>

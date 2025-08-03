@@ -6,7 +6,7 @@ export default function CTA() {
           Ready to Grow Your Business?
         </h2>
         <p className="text-lg text-gray-200 mb-8">
-          Let’s work together to take your business to the next level with our
+          Let	&aposs work together to take your business to the next level with our
           expert strategies and proven results.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

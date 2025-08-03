@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Testimonials() {
   const testimonials = [
     {
@@ -24,34 +26,49 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="bg-[#F3F4F6] py-20 px-6 md:px-12 lg:px-20">
+    <section
+      id="testimonials"
+      className="bg-[#F3F4F6] py-20 px-6 md:px-12 lg:px-20"
+    >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#1E3A8A]">
-          What Our Clients Say
-        </h2>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-          We take pride in delivering exceptional results and building long-term
-          partnerships.
-        </p>
+        <header>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1E3A8A]">
+            What Our Clients Say
+          </h2>
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            We take pride in delivering exceptional results and building
+            long-term partnerships.
+          </p>
+        </header>
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {testimonials.map((t, i) => (
-            <div
+            <article
               key={i}
               className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
             >
-              <img
-                src={t.image}
-                alt={t.name}
-                className="w-20 h-20 rounded-full object-cover mb-4"
-              />
-              <p className="text-gray-700 italic">"{t.feedback}"</p>
-              <h4 className="mt-4 font-bold text-[#1E3A8A]">{t.name}</h4>
-              <span className="text-sm text-[#10B981]">{t.role}</span>
-            </div>
+              <figure className="w-20 h-20 relative mb-4">
+                <Image
+                  src={t.image}
+                  alt={t.name}
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover"
+                />
+              </figure>
+              <blockquote className="text-gray-700 italic">
+                “{t.feedback}”
+              </blockquote>
+              <footer className="mt-4">
+                <h4 className="font-bold text-[#1E3A8A]">{t.name}</h4>
+                <span className="text-sm text-[#10B981]">{t.role}</span>
+              </footer>
+            </article>
           ))}
         </div>
       </div>
     </section>
   );
 }
+
+

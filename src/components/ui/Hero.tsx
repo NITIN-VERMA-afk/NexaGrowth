@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -5,6 +7,7 @@ export default function Hero() {
       className="bg-[#F3F4F6] py-20 px-6 md:px-12 lg:px-20 text-center md:text-left"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+        
         {/* Text Content */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-extrabold text-[#1E3A8A] leading-tight">
@@ -12,7 +15,7 @@ export default function Hero() {
             <span className="text-[#10B981]">Smart Strategies</span>
           </h1>
           <p className="mt-6 text-lg text-gray-700 max-w-lg">
-            At NexaGrowth, we help brands and businesses achieve sustainable
+            At NexaGrowth&#44;we help brands and businesses achieve sustainable
             growth through data-driven marketing, creative design, and
             innovative solutions tailored to your needs.
           </p>
@@ -33,14 +36,18 @@ export default function Hero() {
         </div>
 
         {/* Image / Illustration */}
-        <div className="flex-1">
-          <img
+        <figure className="flex-1">
+          <Image
             src="/logo.jpg"
             alt="Business growth illustration"
-            className="w-full rounded-lg shadow-lg"
+            width={600}
+            height={400}
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
+            priority
           />
-        </div>
+        </figure>
       </div>
     </section>
   );
 }
+

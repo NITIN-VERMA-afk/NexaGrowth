@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-bold">NexaGrowth</h2>
           <p className="mt-3 text-gray-300">
-            Helping businesses grow with smart strategies, creative design, and
+            Helping businesses grow with smart strategies&#44; creative design, and
             data-driven marketing.
           </p>
         </div>
@@ -85,7 +85,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="mt-10 pt-6 border-t border-gray-500 text-center text-gray-400 text-sm">
-        © {new Date().getFullYear()} NexaGrowth. All rights reserved.
+        © {new Date().getFullYear()} NexaGrowth&apos; All rights reserved.
       </div>
     </footer>
   );
