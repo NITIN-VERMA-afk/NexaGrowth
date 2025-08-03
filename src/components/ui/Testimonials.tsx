@@ -47,18 +47,20 @@ export default function Testimonials() {
               key={i}
               className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center"
             >
-              <figure className="w-20 h-20 relative mb-4">
+              {/* Circular image container */}
+              <figure className="w-20 h-20 relative mb-4 overflow-hidden rounded-full">
                 <Image
                   src={t.image}
                   alt={t.name}
-                  width={80}
-                  height={80}
-                  className="rounded-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </figure>
+
               <blockquote className="text-gray-700 italic">
                 “{t.feedback}”
               </blockquote>
+
               <footer className="mt-4">
                 <h4 className="font-bold text-[#1E3A8A]">{t.name}</h4>
                 <span className="text-sm text-[#10B981]">{t.role}</span>
@@ -70,5 +72,6 @@ export default function Testimonials() {
     </section>
   );
 }
+
 
 
