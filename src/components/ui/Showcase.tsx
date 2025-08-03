@@ -1,7 +1,8 @@
+import Image from "next/image";
+
 export default function Showcase() {
   const clients = [
     { name: "TechCorp", logo: "/logo2.jpg" },
-
     { name: "Innovexa", logo: "/logo3.jpg" },
     { name: "Brandify", logo: "/logo4.jpg" },
     { name: "GrowthHub", logo: "/logo5.jpg" },
@@ -23,10 +24,12 @@ export default function Showcase() {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center max-w-6xl mx-auto">
         {clients.map((client, index) => (
           <div key={index} className="flex justify-center">
-            <img
+            <Image
               src={client.logo}
               alt={`${client.name} logo`}
-              className="max-h-12 grayscale hover:grayscale-0 transition duration-300"
+              width={120}
+              height={50}
+              className="grayscale hover:grayscale-0 transition duration-300 object-contain"
             />
           </div>
         ))}
@@ -34,3 +37,4 @@ export default function Showcase() {
     </section>
   );
 }
+
